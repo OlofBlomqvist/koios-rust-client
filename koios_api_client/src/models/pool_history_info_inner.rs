@@ -18,8 +18,8 @@ pub struct PoolHistoryInfoInner {
     #[serde(rename = "saturation_pct", skip_serializing_if = "Option::is_none")]
     pub saturation_pct: Option<f32>,
     /// Number of blocks pool created in that epoch
-    #[serde(rename = "block_cnt", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub block_cnt: Option<Option<i32>>,
+    #[serde(rename = "block_cnt", default, skip_serializing_if = "Option::is_none")]
+    pub block_cnt: Option<i32>,
     /// Number of delegators to the pool for that epoch snapshot
     #[serde(rename = "delegator_cnt", skip_serializing_if = "Option::is_none")]
     pub delegator_cnt: Option<i32>,

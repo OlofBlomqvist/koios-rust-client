@@ -33,14 +33,14 @@ pub struct EpochInfoInner {
     #[serde(rename = "last_block_time", skip_serializing_if = "Option::is_none")]
     pub last_block_time: Option<i32>,
     /// Total active stake in epoch stake snapshot (null for pre-Shelley epochs)
-    #[serde(rename = "active_stake", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub active_stake: Option<Option<String>>,
+    #[serde(rename = "active_stake", default, skip_serializing_if = "Option::is_none")]
+    pub active_stake: Option<String>,
     /// Total rewards earned in epoch (null for pre-Shelley epochs)
-    #[serde(rename = "total_rewards", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub total_rewards: Option<Option<String>>,
+    #[serde(rename = "total_rewards", default, skip_serializing_if = "Option::is_none")]
+    pub total_rewards: Option<String>,
     /// Average block reward for epoch (null for pre-Shelley epochs)
-    #[serde(rename = "avg_blk_reward", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub avg_blk_reward: Option<Option<String>>,
+    #[serde(rename = "avg_blk_reward", default, skip_serializing_if = "Option::is_none")]
+    pub avg_blk_reward: Option<String>,
 }
 
 impl EpochInfoInner {

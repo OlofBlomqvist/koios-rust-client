@@ -19,8 +19,8 @@ pub struct TxInfoInnerOutputsInnerReferenceScript {
     #[serde(rename = "bytes", skip_serializing_if = "Option::is_none")]
     pub bytes: Option<String>,
     /// Value (json)
-    #[serde(rename = "value", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub value: Option<Option<serde_json::Value>>,
+    #[serde(rename = "value", default, skip_serializing_if = "Option::is_none")]
+    pub value: Option<serde_json::Value>,
 }
 
 impl TxInfoInnerOutputsInnerReferenceScript {

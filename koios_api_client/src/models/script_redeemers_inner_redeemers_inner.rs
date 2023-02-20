@@ -12,11 +12,11 @@ pub struct ScriptRedeemersInnerRedeemersInner {
     #[serde(rename = "tx_index", skip_serializing_if = "Option::is_none")]
     pub tx_index: Option<i32>,
     /// The budget in Memory to run a script
-    #[serde(rename = "unit_mem", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub unit_mem: Option<Option<::std::collections::HashMap<String, crate::models::ScriptRedeemersInnerRedeemersInnerUnitMemValue>>>,
+    #[serde(rename = "unit_mem", default, skip_serializing_if = "Option::is_none")]
+    pub unit_mem: Option<::std::collections::HashMap<String, crate::models::ScriptRedeemersInnerRedeemersInnerUnitMemValue>>,
     /// The budget in Cpu steps to run a script
-    #[serde(rename = "unit_steps", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub unit_steps: Option<Option<::std::collections::HashMap<String, crate::models::ScriptRedeemersInnerRedeemersInnerUnitMemValue>>>,
+    #[serde(rename = "unit_steps", default, skip_serializing_if = "Option::is_none")]
+    pub unit_steps: Option<::std::collections::HashMap<String, crate::models::ScriptRedeemersInnerRedeemersInnerUnitMemValue>>,
     /// The budget in fees to run a script - the fees depend on the ExUnits and the current prices
     #[serde(rename = "fee", skip_serializing_if = "Option::is_none")]
     pub fee: Option<String>,
@@ -24,8 +24,8 @@ pub struct ScriptRedeemersInnerRedeemersInner {
     #[serde(rename = "purpose", skip_serializing_if = "Option::is_none")]
     pub purpose: Option<Purpose>,
     /// The Hash of the Plutus Data
-    #[serde(rename = "datum_hash", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub datum_hash: Option<Option<String>>,
+    #[serde(rename = "datum_hash", default, skip_serializing_if = "Option::is_none")]
+    pub datum_hash: Option<String>,
     /// The actual data in json format
     #[serde(rename = "datum_value", skip_serializing_if = "Option::is_none")]
     pub datum_value: Option<serde_json::Value>,

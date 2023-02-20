@@ -10,8 +10,8 @@ pub struct AddressInfoInner {
     /// Sum of all UTxO values beloning to address
     #[serde(rename = "balance", skip_serializing_if = "Option::is_none")]
     pub balance: Option<String>,
-    #[serde(rename = "stake_address", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub stake_address: Option<Option<Box<String>>>,
+    #[serde(rename = "stake_address", default, skip_serializing_if = "Option::is_none")]
+    pub stake_address: Option<String>,
     /// Signifies whether the address is a script address
     #[serde(rename = "script_address", skip_serializing_if = "Option::is_none")]
     pub script_address: Option<bool>,

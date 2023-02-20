@@ -33,8 +33,8 @@ pub struct BlocksInner {
     #[serde(rename = "vrf_key", skip_serializing_if = "Option::is_none")]
     pub vrf_key: Option<String>,
     /// Pool ID in bech32 format (null for pre-Shelley blocks)
-    #[serde(rename = "pool", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub pool: Option<Option<String>>,
+    #[serde(rename = "pool", default, skip_serializing_if = "Option::is_none")]
+    pub pool: Option<String>,
     /// Counter value of the operational certificate used to create this block
     #[serde(rename = "op_cert_counter", skip_serializing_if = "Option::is_none")]
     pub op_cert_counter: Option<i32>,

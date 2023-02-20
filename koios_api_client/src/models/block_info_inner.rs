@@ -35,11 +35,11 @@ pub struct BlockInfoInner {
     #[serde(rename = "proto_minor", skip_serializing_if = "Option::is_none")]
     pub proto_minor: Option<i128>,
     /// Total output of the block (in lovelace)
-    #[serde(rename = "total_output", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub total_output: Option<Option<String>>,
+    #[serde(rename = "total_output", default, skip_serializing_if = "Option::is_none")]
+    pub total_output: Option<String>,
     /// Total fees of the block (in lovelace)
-    #[serde(rename = "total_fees", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub total_fees: Option<Option<String>>,
+    #[serde(rename = "total_fees", default, skip_serializing_if = "Option::is_none")]
+    pub total_fees: Option<String>,
     /// Number of confirmations for the block
     #[serde(rename = "num_confirmations", skip_serializing_if = "Option::is_none")]
     pub num_confirmations: Option<i32>,

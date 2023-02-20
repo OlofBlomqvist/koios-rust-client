@@ -39,11 +39,11 @@ pub struct TxInfoInner {
     #[serde(rename = "deposit", skip_serializing_if = "Option::is_none")]
     pub deposit: Option<String>,
     /// Slot before which transaction cannot be validated (if supplied, else null)
-    #[serde(rename = "invalid_before", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub invalid_before: Option<Option<i32>>,
+    #[serde(rename = "invalid_before", default, skip_serializing_if = "Option::is_none")]
+    pub invalid_before: Option<i32>,
     /// Slot after which transaction cannot be validated
-    #[serde(rename = "invalid_after", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub invalid_after: Option<Option<i32>>,
+    #[serde(rename = "invalid_after", default, skip_serializing_if = "Option::is_none")]
+    pub invalid_after: Option<i32>,
     #[serde(rename = "collateral_inputs", skip_serializing_if = "Option::is_none")]
     pub collateral_inputs: Option<Vec<Utxo>>,
     #[serde(rename = "collateral_output", skip_serializing_if = "Option::is_none")]
@@ -56,19 +56,19 @@ pub struct TxInfoInner {
     #[serde(rename = "outputs", skip_serializing_if = "Option::is_none")]
     pub outputs: Option<Vec<crate::models::TxInfoInnerOutputsInner>>,
     /// Array of withdrawals with-in a transaction
-    #[serde(rename = "withdrawals", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub withdrawals: Option<Option<Vec<crate::models::TxInfoInnerWithdrawalsInner>>>,
+    #[serde(rename = "withdrawals", default, skip_serializing_if = "Option::is_none")]
+    pub withdrawals: Option<Vec<crate::models::TxInfoInnerWithdrawalsInner>>,
     /// Array of minted assets with-in a transaction
-    #[serde(rename = "assets_minted", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub assets_minted: Option<Option<Vec<crate::models::TxInfoInnerAssetsMintedInner>>>,
+    #[serde(rename = "assets_minted", default, skip_serializing_if = "Option::is_none")]
+    pub assets_minted: Option<Vec<crate::models::TxInfoInnerAssetsMintedInner>>,
     #[serde(rename = "metadata", skip_serializing_if = "Option::is_none")]
     pub metadata: Option<serde_json::value::Value>,
     /// Certificates present with-in a transaction (if any)
-    #[serde(rename = "certificates", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub certificates: Option<Option<Vec<crate::models::TxInfoInnerCertificatesInner>>>,
+    #[serde(rename = "certificates", default, skip_serializing_if = "Option::is_none")]
+    pub certificates: Option<Vec<crate::models::TxInfoInnerCertificatesInner>>,
     /// Native scripts present in a transaction (if any)
-    #[serde(rename = "native_scripts", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub native_scripts: Option<Option<Vec<crate::models::TxInfoInnerNativeScriptsInner>>>,
+    #[serde(rename = "native_scripts", default, skip_serializing_if = "Option::is_none")]
+    pub native_scripts: Option<Vec<crate::models::TxInfoInnerNativeScriptsInner>>,
     /// Plutus contracts present in transaction (if any)
     #[serde(rename = "plutus_contracts", skip_serializing_if = "Option::is_none")]
     pub plutus_contracts: Option<Vec<crate::models::TxInfoInnerPlutusContractsInner>>,

@@ -33,46 +33,46 @@ pub struct PoolInfoInner {
     #[serde(rename = "relays", skip_serializing_if = "Option::is_none")]
     pub relays: Option<Vec<serde_json::value::Value>>,
     /// Pool metadata URL
-    #[serde(rename = "meta_url", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub meta_url: Option<Option<String>>,
+    #[serde(rename = "meta_url", default, skip_serializing_if = "Option::is_none")]
+    pub meta_url: Option<String>,
     /// Pool metadata hash
-    #[serde(rename = "meta_hash", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub meta_hash: Option<Option<String>>,
-    #[serde(rename = "meta_json", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub meta_json: Option<Option<Box<serde_json::value::Value>>>,
+    #[serde(rename = "meta_hash", default, skip_serializing_if = "Option::is_none")]
+    pub meta_hash: Option<String>,
+    #[serde(rename = "meta_json", default, skip_serializing_if = "Option::is_none")]
+    pub meta_json: Option<Box<serde_json::value::Value>>,
     /// Pool status
     #[serde(rename = "pool_status", skip_serializing_if = "Option::is_none")]
     pub pool_status: Option<PoolStatus>,
     /// Announced retiring epoch (nullable)
-    #[serde(rename = "retiring_epoch", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub retiring_epoch: Option<Option<i32>>,
+    #[serde(rename = "retiring_epoch", default, skip_serializing_if = "Option::is_none")]
+    pub retiring_epoch: Option<i32>,
     /// Pool latest operational certificate hash
-    #[serde(rename = "op_cert", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub op_cert: Option<Option<String>>,
+    #[serde(rename = "op_cert", default, skip_serializing_if = "Option::is_none")]
+    pub op_cert: Option<String>,
     /// Pool latest operational certificate counter value
-    #[serde(rename = "op_cert_counter", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub op_cert_counter: Option<Option<i32>>,
+    #[serde(rename = "op_cert_counter", default, skip_serializing_if = "Option::is_none")]
+    pub op_cert_counter: Option<i32>,
     /// Pool active stake (will be null post epoch transition until dbsync calculation is complete)
-    #[serde(rename = "active_stake", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub active_stake: Option<Option<String>>,
+    #[serde(rename = "active_stake", default, skip_serializing_if = "Option::is_none")]
+    pub active_stake: Option<String>,
     /// Pool relative active stake share
-    #[serde(rename = "sigma", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub sigma: Option<Option<f32>>,
+    #[serde(rename = "sigma", default, skip_serializing_if = "Option::is_none")]
+    pub sigma: Option<f32>,
     /// Total pool blocks on chain
-    #[serde(rename = "block_count", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub block_count: Option<Option<i32>>,
+    #[serde(rename = "block_count", default, skip_serializing_if = "Option::is_none")]
+    pub block_count: Option<i32>,
     /// Summary of account balance for all pool owner's
-    #[serde(rename = "live_pledge", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub live_pledge: Option<Option<String>>,
+    #[serde(rename = "live_pledge", default, skip_serializing_if = "Option::is_none")]
+    pub live_pledge: Option<String>,
     /// Pool live stake
-    #[serde(rename = "live_stake", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub live_stake: Option<Option<String>>,
+    #[serde(rename = "live_stake", default, skip_serializing_if = "Option::is_none")]
+    pub live_stake: Option<String>,
     /// Pool live delegator count
     #[serde(rename = "live_delegators", skip_serializing_if = "Option::is_none")]
     pub live_delegators: Option<i32>,
     /// Pool live saturation (decimal format)
-    #[serde(rename = "live_saturation", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub live_saturation: Option<Option<f32>>,
+    #[serde(rename = "live_saturation", default, skip_serializing_if = "Option::is_none")]
+    pub live_saturation: Option<f32>,
 }
 
 impl PoolInfoInner {

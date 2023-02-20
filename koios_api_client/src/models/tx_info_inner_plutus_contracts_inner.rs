@@ -21,8 +21,8 @@ pub struct TxInfoInnerPlutusContractsInner {
     pub valid_contract: Option<bool>,
     #[serde(rename = "input", skip_serializing_if = "Option::is_none")]
     pub input: Option<Box<crate::models::TxInfoInnerPlutusContractsInnerInput>>,
-    #[serde(rename = "output", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub output: Option<Option<Box<crate::models::TxInfoInnerPlutusContractsInnerOutput>>>,
+    #[serde(rename = "output", default, skip_serializing_if = "Option::is_none")]
+    pub output: Option<Box<crate::models::TxInfoInnerPlutusContractsInnerOutput>>,
 }
 
 impl TxInfoInnerPlutusContractsInner {

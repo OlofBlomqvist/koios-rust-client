@@ -9,98 +9,98 @@ pub struct EpochParamsInner {
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
     pub epoch_no: Option<i32>,
     /// The 'a' parameter to calculate the minimum transaction fee
-    #[serde(rename = "min_fee_a", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub min_fee_a: Option<Option<i32>>,
+    #[serde(rename = "min_fee_a", default, skip_serializing_if = "Option::is_none")]
+    pub min_fee_a: Option<i32>,
     /// The 'b' parameter to calculate the minimum transaction fee
-    #[serde(rename = "min_fee_b", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub min_fee_b: Option<Option<i32>>,
+    #[serde(rename = "min_fee_b", default, skip_serializing_if = "Option::is_none")]
+    pub min_fee_b: Option<i32>,
     /// The maximum block size (in bytes)
-    #[serde(rename = "max_block_size", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_block_size: Option<Option<i32>>,
+    #[serde(rename = "max_block_size", default, skip_serializing_if = "Option::is_none")]
+    pub max_block_size: Option<i32>,
     /// The maximum transaction size (in bytes)
-    #[serde(rename = "max_tx_size", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_tx_size: Option<Option<i32>>,
+    #[serde(rename = "max_tx_size", default, skip_serializing_if = "Option::is_none")]
+    pub max_tx_size: Option<i32>,
     /// The maximum block header size (in bytes)
-    #[serde(rename = "max_bh_size", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_bh_size: Option<Option<i32>>,
+    #[serde(rename = "max_bh_size", default, skip_serializing_if = "Option::is_none")]
+    pub max_bh_size: Option<i32>,
     /// The amount (in lovelace) required for a deposit to register a stake address
-    #[serde(rename = "key_deposit", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub key_deposit: Option<Option<String>>,
+    #[serde(rename = "key_deposit", default, skip_serializing_if = "Option::is_none")]
+    pub key_deposit: Option<String>,
     /// The amount (in lovelace) required for a deposit to register a stake pool
-    #[serde(rename = "pool_deposit", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub pool_deposit: Option<Option<String>>,
+    #[serde(rename = "pool_deposit", default, skip_serializing_if = "Option::is_none")]
+    pub pool_deposit: Option<String>,
     /// The maximum number of epochs in the future that a pool retirement is allowed to be scheduled for
-    #[serde(rename = "max_epoch", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_epoch: Option<Option<i32>>,
+    #[serde(rename = "max_epoch", default, skip_serializing_if = "Option::is_none")]
+    pub max_epoch: Option<i32>,
     /// The optimal number of stake pools
-    #[serde(rename = "optimal_pool_count", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub optimal_pool_count: Option<Option<i32>>,
+    #[serde(rename = "optimal_pool_count", default, skip_serializing_if = "Option::is_none")]
+    pub optimal_pool_count: Option<i32>,
     /// The pledge influence on pool rewards
-    #[serde(rename = "influence", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub influence: Option<Option<f64>>,
+    #[serde(rename = "influence", default, skip_serializing_if = "Option::is_none")]
+    pub influence: Option<f64>,
     /// The monetary expansion rate
-    #[serde(rename = "monetary_expand_rate", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub monetary_expand_rate: Option<Option<f64>>,
+    #[serde(rename = "monetary_expand_rate", default, skip_serializing_if = "Option::is_none")]
+    pub monetary_expand_rate: Option<f64>,
     /// The treasury growth rate
-    #[serde(rename = "treasury_growth_rate", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub treasury_growth_rate: Option<Option<f64>>,
+    #[serde(rename = "treasury_growth_rate", default, skip_serializing_if = "Option::is_none")]
+    pub treasury_growth_rate: Option<f64>,
     /// The decentralisation parameter (1 fully centralised, 0 fully decentralised)
-    #[serde(rename = "decentralisation", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub decentralisation: Option<Option<f64>>,
+    #[serde(rename = "decentralisation", default, skip_serializing_if = "Option::is_none")]
+    pub decentralisation: Option<f64>,
     /// The hash of 32-byte string of extra random-ness added into the protocol's entropy pool
-    #[serde(rename = "extra_entropy", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub extra_entropy: Option<Option<String>>,
+    #[serde(rename = "extra_entropy", default, skip_serializing_if = "Option::is_none")]
+    pub extra_entropy: Option<String>,
     /// The protocol major version
-    #[serde(rename = "protocol_major", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub protocol_major: Option<Option<i32>>,
+    #[serde(rename = "protocol_major", default, skip_serializing_if = "Option::is_none")]
+    pub protocol_major: Option<i32>,
     /// The protocol minor version
-    #[serde(rename = "protocol_minor", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub protocol_minor: Option<Option<i32>>,
+    #[serde(rename = "protocol_minor", default, skip_serializing_if = "Option::is_none")]
+    pub protocol_minor: Option<i32>,
     /// The minimum value of a UTxO entry
-    #[serde(rename = "min_utxo_value", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub min_utxo_value: Option<Option<String>>,
+    #[serde(rename = "min_utxo_value", default, skip_serializing_if = "Option::is_none")]
+    pub min_utxo_value: Option<String>,
     /// The minimum pool cost
-    #[serde(rename = "min_pool_cost", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub min_pool_cost: Option<Option<String>>,
+    #[serde(rename = "min_pool_cost", default, skip_serializing_if = "Option::is_none")]
+    pub min_pool_cost: Option<String>,
     /// The nonce value for this epoch
-    #[serde(rename = "nonce", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub nonce: Option<Option<String>>,
+    #[serde(rename = "nonce", default, skip_serializing_if = "Option::is_none")]
+    pub nonce: Option<String>,
     /// The hash of the first block where these parameters are valid
     #[serde(rename = "block_hash", skip_serializing_if = "Option::is_none")]
     pub block_hash: Option<String>,
     /// The per language cost models
-    #[serde(rename = "cost_models", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub cost_models: Option<Option<String>>,
+    #[serde(rename = "cost_models", default, skip_serializing_if = "Option::is_none")]
+    pub cost_models: Option<String>,
     /// The per word cost of script memory usage
-    #[serde(rename = "price_mem", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub price_mem: Option<Option<f64>>,
+    #[serde(rename = "price_mem", default, skip_serializing_if = "Option::is_none")]
+    pub price_mem: Option<f64>,
     /// The cost of script execution step usage
-    #[serde(rename = "price_step", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub price_step: Option<Option<f64>>,
+    #[serde(rename = "price_step", default, skip_serializing_if = "Option::is_none")]
+    pub price_step: Option<f64>,
     /// The maximum number of execution memory allowed to be used in a single transaction
-    #[serde(rename = "max_tx_ex_mem", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_tx_ex_mem: Option<Option<f32>>,
+    #[serde(rename = "max_tx_ex_mem", default, skip_serializing_if = "Option::is_none")]
+    pub max_tx_ex_mem: Option<f32>,
     /// The maximum number of execution steps allowed to be used in a single transaction
-    #[serde(rename = "max_tx_ex_steps", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_tx_ex_steps: Option<Option<f32>>,
+    #[serde(rename = "max_tx_ex_steps", default, skip_serializing_if = "Option::is_none")]
+    pub max_tx_ex_steps: Option<f32>,
     /// The maximum number of execution memory allowed to be used in a single block
-    #[serde(rename = "max_block_ex_mem", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_block_ex_mem: Option<Option<f32>>,
+    #[serde(rename = "max_block_ex_mem", default, skip_serializing_if = "Option::is_none")]
+    pub max_block_ex_mem: Option<f32>,
     /// The maximum number of execution steps allowed to be used in a single block
-    #[serde(rename = "max_block_ex_steps", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_block_ex_steps: Option<Option<f32>>,
+    #[serde(rename = "max_block_ex_steps", default, skip_serializing_if = "Option::is_none")]
+    pub max_block_ex_steps: Option<f32>,
     /// The maximum Val size
-    #[serde(rename = "max_val_size", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_val_size: Option<Option<f32>>,
+    #[serde(rename = "max_val_size", default, skip_serializing_if = "Option::is_none")]
+    pub max_val_size: Option<f32>,
     /// The percentage of the tx fee which must be provided as collateral when including non-native scripts
-    #[serde(rename = "collateral_percent", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub collateral_percent: Option<Option<i32>>,
+    #[serde(rename = "collateral_percent", default, skip_serializing_if = "Option::is_none")]
+    pub collateral_percent: Option<i32>,
     /// The maximum number of collateral inputs allowed in a transaction
-    #[serde(rename = "max_collateral_inputs", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub max_collateral_inputs: Option<Option<i32>>,
+    #[serde(rename = "max_collateral_inputs", default, skip_serializing_if = "Option::is_none")]
+    pub max_collateral_inputs: Option<i32>,
     /// The cost per UTxO size
-    #[serde(rename = "coins_per_utxo_size", default, with = "::serde_with::rust::double_option", skip_serializing_if = "Option::is_none")]
-    pub coins_per_utxo_size: Option<Option<String>>,
+    #[serde(rename = "coins_per_utxo_size", default, skip_serializing_if = "Option::is_none")]
+    pub coins_per_utxo_size: Option<String>,
 }
 
 impl EpochParamsInner {
