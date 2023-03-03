@@ -15,7 +15,7 @@ pub struct PoolUpdatesInner {
     pub pool_id_hex: Option<String>,
     /// Epoch number in which the update becomes active
     #[serde(rename = "active_epoch_no", skip_serializing_if = "Option::is_none")]
-    pub active_epoch_no: Option<i32>,
+    pub active_epoch_no: Option<i128>,
     #[serde(rename = "vrf_key_hash", skip_serializing_if = "Option::is_none")]
     pub vrf_key_hash: Option<String>,
     #[serde(rename = "margin", skip_serializing_if = "Option::is_none")]

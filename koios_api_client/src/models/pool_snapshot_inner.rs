@@ -10,7 +10,7 @@ pub struct PoolSnapshotInner {
     pub snapshot: Option<String>,
     /// Epoch number for the snapshot entry
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
     #[serde(rename = "nonce", skip_serializing_if = "Option::is_none")]
     pub nonce: Option<String>,
     /// Pool's Active Stake for the given epoch

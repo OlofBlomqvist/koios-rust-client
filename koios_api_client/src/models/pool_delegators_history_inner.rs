@@ -11,7 +11,7 @@ pub struct PoolDelegatorsHistoryInner {
     pub amount: Option<String>,
     /// Epoch number for the delegation history
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
 }
 
 impl PoolDelegatorsHistoryInner {

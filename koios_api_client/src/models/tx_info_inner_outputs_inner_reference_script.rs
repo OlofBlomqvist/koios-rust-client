@@ -11,7 +11,7 @@ pub struct TxInfoInnerOutputsInnerReferenceScript {
     pub hash: Option<String>,
     /// Size in bytes
     #[serde(rename = "size", skip_serializing_if = "Option::is_none")]
-    pub size: Option<i32>,
+    pub size: Option<i128>,
     /// Type of script
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
     pub r#type: Option<String>,

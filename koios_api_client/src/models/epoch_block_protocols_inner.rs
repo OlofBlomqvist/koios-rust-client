@@ -7,13 +7,13 @@
 pub struct EpochBlockProtocolsInner {
     /// Protocol major version
     #[serde(rename = "proto_major", skip_serializing_if = "Option::is_none")]
-    pub proto_major: Option<i32>,
+    pub proto_major: Option<i128>,
     /// Protocol major version
     #[serde(rename = "proto_minor", skip_serializing_if = "Option::is_none")]
-    pub proto_minor: Option<i32>,
+    pub proto_minor: Option<i128>,
     /// Amount of blocks with specified major and protocol combination
     #[serde(rename = "blocks", skip_serializing_if = "Option::is_none")]
-    pub blocks: Option<i32>,
+    pub blocks: Option<i128>,
 }
 
 impl EpochBlockProtocolsInner {

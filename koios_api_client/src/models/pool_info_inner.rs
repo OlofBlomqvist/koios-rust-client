@@ -45,13 +45,13 @@ pub struct PoolInfoInner {
     pub pool_status: Option<PoolStatus>,
     /// Announced retiring epoch (nullable)
     #[serde(rename = "retiring_epoch", default, skip_serializing_if = "Option::is_none")]
-    pub retiring_epoch: Option<i32>,
+    pub retiring_epoch: Option<i128>,
     /// Pool latest operational certificate hash
     #[serde(rename = "op_cert", default, skip_serializing_if = "Option::is_none")]
     pub op_cert: Option<String>,
     /// Pool latest operational certificate counter value
     #[serde(rename = "op_cert_counter", default, skip_serializing_if = "Option::is_none")]
-    pub op_cert_counter: Option<i32>,
+    pub op_cert_counter: Option<i128>,
     /// Pool active stake (will be null post epoch transition until dbsync calculation is complete)
     #[serde(rename = "active_stake", default, skip_serializing_if = "Option::is_none")]
     pub active_stake: Option<String>,
@@ -60,7 +60,7 @@ pub struct PoolInfoInner {
     pub sigma: Option<f32>,
     /// Total pool blocks on chain
     #[serde(rename = "block_count", default, skip_serializing_if = "Option::is_none")]
-    pub block_count: Option<i32>,
+    pub block_count: Option<i128>,
     /// Summary of account balance for all pool owner's
     #[serde(rename = "live_pledge", default, skip_serializing_if = "Option::is_none")]
     pub live_pledge: Option<String>,
@@ -69,7 +69,7 @@ pub struct PoolInfoInner {
     pub live_stake: Option<String>,
     /// Pool live delegator count
     #[serde(rename = "live_delegators", skip_serializing_if = "Option::is_none")]
-    pub live_delegators: Option<i32>,
+    pub live_delegators: Option<i128>,
     /// Pool live saturation (decimal format)
     #[serde(rename = "live_saturation", default, skip_serializing_if = "Option::is_none")]
     pub live_saturation: Option<f32>,

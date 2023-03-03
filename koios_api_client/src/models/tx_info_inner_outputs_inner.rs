@@ -14,7 +14,7 @@ pub struct TxInfoInnerOutputsInner {
     pub tx_hash: Option<String>,
     /// Index of UTxO in the transaction
     #[serde(rename = "tx_index", skip_serializing_if = "Option::is_none")]
-    pub tx_index: Option<i32>,
+    pub tx_index: Option<i128>,
     /// Total sum of ADA on the UTxO
     #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
     pub value: Option<String>,

@@ -10,7 +10,7 @@ pub struct ScriptRedeemersInnerRedeemersInner {
     pub tx_hash: Option<String>,
     /// The index of the redeemer pointer in the transaction
     #[serde(rename = "tx_index", skip_serializing_if = "Option::is_none")]
-    pub tx_index: Option<i32>,
+    pub tx_index: Option<i128>,
     /// The budget in Memory to run a script
     #[serde(rename = "unit_mem", default, skip_serializing_if = "Option::is_none")]
     pub unit_mem: Option<::std::collections::HashMap<String, crate::models::ScriptRedeemersInnerRedeemersInnerUnitMemValue>>,

@@ -15,7 +15,7 @@ pub struct TxInfoInnerPlutusContractsInner {
     pub bytecode: Option<String>,
     /// The size of the CBOR serialised script (in bytes)
     #[serde(rename = "size", skip_serializing_if = "Option::is_none")]
-    pub size: Option<i32>,
+    pub size: Option<i128>,
     /// True if the contract is valid or there is no contract
     #[serde(rename = "valid_contract", skip_serializing_if = "Option::is_none")]
     pub valid_contract: Option<bool>,

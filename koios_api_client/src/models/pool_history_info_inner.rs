@@ -7,7 +7,7 @@
 pub struct PoolHistoryInfoInner {
     /// Epoch for which the pool history data is shown
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
     /// Amount of delegated stake to this pool at the time of epoch snapshot (in lovelaces)
     #[serde(rename = "active_stake", skip_serializing_if = "Option::is_none")]
     pub active_stake: Option<String>,
@@ -19,10 +19,10 @@ pub struct PoolHistoryInfoInner {
     pub saturation_pct: Option<f32>,
     /// Number of blocks pool created in that epoch
     #[serde(rename = "block_cnt", default, skip_serializing_if = "Option::is_none")]
-    pub block_cnt: Option<i32>,
+    pub block_cnt: Option<i128>,
     /// Number of delegators to the pool for that epoch snapshot
     #[serde(rename = "delegator_cnt", skip_serializing_if = "Option::is_none")]
-    pub delegator_cnt: Option<i32>,
+    pub delegator_cnt: Option<i128>,
     /// Margin (decimal format)
     #[serde(rename = "margin", skip_serializing_if = "Option::is_none")]
     pub margin: Option<f32>,

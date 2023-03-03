@@ -10,25 +10,25 @@ pub struct BlocksInner {
     pub hash: Option<String>,
     /// Epoch number of the block
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
     /// Absolute slot number of the block
     #[serde(rename = "abs_slot", skip_serializing_if = "Option::is_none")]
-    pub abs_slot: Option<i32>,
+    pub abs_slot: Option<i128>,
     /// Slot number of the block in epoch
     #[serde(rename = "epoch_slot", skip_serializing_if = "Option::is_none")]
-    pub epoch_slot: Option<i32>,
+    pub epoch_slot: Option<i128>,
     /// Block height
     #[serde(rename = "block_height", skip_serializing_if = "Option::is_none")]
-    pub block_height: Option<i32>,
+    pub block_height: Option<i128>,
     /// Block size in bytes
     #[serde(rename = "block_size", skip_serializing_if = "Option::is_none")]
-    pub block_size: Option<i32>,
+    pub block_size: Option<i128>,
     /// UNIX timestamp of the block
     #[serde(rename = "block_time", skip_serializing_if = "Option::is_none")]
-    pub block_time: Option<i32>,
+    pub block_time: Option<i128>,
     /// Number of transactions in the block
     #[serde(rename = "tx_count", skip_serializing_if = "Option::is_none")]
-    pub tx_count: Option<i32>,
+    pub tx_count: Option<i128>,
     /// VRF key of the block producer
     #[serde(rename = "vrf_key", skip_serializing_if = "Option::is_none")]
     pub vrf_key: Option<String>,
@@ -37,7 +37,7 @@ pub struct BlocksInner {
     pub pool: Option<String>,
     /// Counter value of the operational certificate used to create this block
     #[serde(rename = "op_cert_counter", skip_serializing_if = "Option::is_none")]
-    pub op_cert_counter: Option<i32>,
+    pub op_cert_counter: Option<i128>,
     #[serde(rename = "proto_major", skip_serializing_if = "Option::is_none")]
     pub proto_major: Option<i128>,
     #[serde(rename = "proto_minor", skip_serializing_if = "Option::is_none")]

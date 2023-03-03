@@ -7,7 +7,7 @@
 pub struct TxInfoInnerCertificatesInner {
     /// Certificate index
     #[serde(rename = "index", default, skip_serializing_if = "Option::is_none")]
-    pub index: Option<i32>,
+    pub index: Option<i128>,
     /// Type of certificate (could be delegation, stake_registration, stake_deregistraion, pool_update, pool_retire, param_proposal, reserve_MIR, treasury_MIR)
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
     pub r#type: Option<String>,

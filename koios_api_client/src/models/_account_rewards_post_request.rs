@@ -10,7 +10,7 @@ pub struct AccountRewardsPostRequest {
     pub _stake_addresses: Vec<String>,
     /// Only fetch information for a specific epoch
     #[serde(rename = "_epoch_no", skip_serializing_if = "Option::is_none")]
-    pub _epoch_no: Option<i32>,
+    pub _epoch_no: Option<i128>,
 }
 
 impl AccountRewardsPostRequest {

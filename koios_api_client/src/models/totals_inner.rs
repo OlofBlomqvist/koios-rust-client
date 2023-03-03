@@ -7,7 +7,7 @@
 pub struct TotalsInner {
     /// Epoch number
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
     /// Circulating UTxOs for given epoch (in lovelaces)
     #[serde(rename = "circulation", skip_serializing_if = "Option::is_none")]
     pub circulation: Option<String>,

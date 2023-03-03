@@ -18,7 +18,7 @@ pub struct AssetInfoInnerTokenRegistryMetadata {
     #[serde(rename = "logo", skip_serializing_if = "Option::is_none")]
     pub logo: Option<String>,
     #[serde(rename = "decimals", skip_serializing_if = "Option::is_none")]
-    pub decimals: Option<i32>,
+    pub decimals: Option<i128>,
 }
 
 impl AssetInfoInnerTokenRegistryMetadata {

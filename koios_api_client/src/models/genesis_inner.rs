@@ -22,7 +22,7 @@ pub struct GenesisInner {
     pub maxlovelacesupply: Option<String>,
     /// UNIX timestamp of the first block (genesis) on chain
     #[serde(rename = "systemstart", skip_serializing_if = "Option::is_none")]
-    pub systemstart: Option<i32>,
+    pub systemstart: Option<i128>,
     /// Active Slot Co-Efficient (f) - determines the _probability_ of number of slots in epoch that are expected to have blocks (so mainnet, this would be: 432000 * 0.05 = 21600 estimated blocks)
     #[serde(rename = "activeslotcoeff", skip_serializing_if = "Option::is_none")]
     pub activeslotcoeff: Option<String>,

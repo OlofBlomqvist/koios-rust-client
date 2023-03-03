@@ -13,13 +13,13 @@ pub struct AssetSummaryInner {
     pub fingerprint: Option<String>,
     /// Total number of transactions including the given asset
     #[serde(rename = "total_transactions", skip_serializing_if = "Option::is_none")]
-    pub total_transactions: Option<i32>,
+    pub total_transactions: Option<i128>,
     /// Total number of registered wallets holding the given asset
     #[serde(rename = "staked_wallets", skip_serializing_if = "Option::is_none")]
-    pub staked_wallets: Option<i32>,
+    pub staked_wallets: Option<i128>,
     /// Total number of payment addresses (not belonging to registered wallets) holding the given asset
     #[serde(rename = "unstaked_addresses", skip_serializing_if = "Option::is_none")]
-    pub unstaked_addresses: Option<i32>,
+    pub unstaked_addresses: Option<i128>,
 }
 
 impl AssetSummaryInner {

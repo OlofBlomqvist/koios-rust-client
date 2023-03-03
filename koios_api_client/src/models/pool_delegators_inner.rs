@@ -12,7 +12,7 @@ pub struct PoolDelegatorsInner {
     pub amount: Option<String>,
     /// Epoch number in which the delegation becomes active
     #[serde(rename = "active_epoch_no", skip_serializing_if = "Option::is_none")]
-    pub active_epoch_no: Option<i32>,
+    pub active_epoch_no: Option<i128>,
     /// Latest transaction hash used for delegation by the account
     #[serde(rename = "latest_delegation_hash", skip_serializing_if = "Option::is_none")]
     pub latest_delegation_hash: Option<String>,

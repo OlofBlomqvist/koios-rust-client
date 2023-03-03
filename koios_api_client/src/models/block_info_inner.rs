@@ -42,7 +42,7 @@ pub struct BlockInfoInner {
     pub total_fees: Option<String>,
     /// Number of confirmations for the block
     #[serde(rename = "num_confirmations", skip_serializing_if = "Option::is_none")]
-    pub num_confirmations: Option<i32>,
+    pub num_confirmations: Option<i128>,
     /// Hash of the parent of this block
     #[serde(rename = "parent_hash", skip_serializing_if = "Option::is_none")]
     pub parent_hash: Option<String>,

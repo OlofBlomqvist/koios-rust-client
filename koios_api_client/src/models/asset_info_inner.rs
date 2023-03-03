@@ -22,10 +22,10 @@ pub struct AssetInfoInner {
     pub minting_tx_hash: Option<String>,
     /// Count of total mint transactions
     #[serde(rename = "mint_cnt", skip_serializing_if = "Option::is_none")]
-    pub mint_cnt: Option<i32>,
+    pub mint_cnt: Option<i128>,
     /// Count of total burn transactions
     #[serde(rename = "burn_cnt", skip_serializing_if = "Option::is_none")]
-    pub burn_cnt: Option<i32>,
+    pub burn_cnt: Option<i128>,
     /// Latest minting transaction metadata (aligns with CIP-25)
     #[serde(rename = "minting_tx_metadata", skip_serializing_if = "Option::is_none")]
     pub minting_tx_metadata: Option<Box<serde_json::value::Value>>,
@@ -35,7 +35,7 @@ pub struct AssetInfoInner {
     pub total_supply: Option<String>,
     /// UNIX timestamp of the first asset mint
     #[serde(rename = "creation_time", skip_serializing_if = "Option::is_none")]
-    pub creation_time: Option<i32>,
+    pub creation_time: Option<i128>,
 }
 
 impl AssetInfoInner {

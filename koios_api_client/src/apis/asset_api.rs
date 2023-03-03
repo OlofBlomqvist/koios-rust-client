@@ -261,7 +261,7 @@ pub async fn asset_summary_get(configuration: &configuration::Configuration, _as
 }
 
 /// Get the list of current or all asset transaction hashes (newest first)
-pub async fn asset_txs_get(configuration: &configuration::Configuration, _asset_policy: &str, _asset_name: Option<&str>, _after_block_height: Option<i32>, _history: Option<bool>) -> Result<Vec<crate::models::AssetTxsInner>, Error<AssetTxsGetError>> {
+pub async fn asset_txs_get(configuration: &configuration::Configuration, _asset_policy: &str, _asset_name: Option<&str>, _after_block_height: Option<i128>, _history: Option<bool>) -> Result<Vec<crate::models::AssetTxsInner>, Error<AssetTxsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

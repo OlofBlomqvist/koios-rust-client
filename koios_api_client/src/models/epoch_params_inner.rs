@@ -7,22 +7,22 @@
 pub struct EpochParamsInner {
     /// Epoch number
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
     /// The 'a' parameter to calculate the minimum transaction fee
     #[serde(rename = "min_fee_a", default, skip_serializing_if = "Option::is_none")]
-    pub min_fee_a: Option<i32>,
+    pub min_fee_a: Option<i128>,
     /// The 'b' parameter to calculate the minimum transaction fee
     #[serde(rename = "min_fee_b", default, skip_serializing_if = "Option::is_none")]
-    pub min_fee_b: Option<i32>,
+    pub min_fee_b: Option<i128>,
     /// The maximum block size (in bytes)
     #[serde(rename = "max_block_size", default, skip_serializing_if = "Option::is_none")]
-    pub max_block_size: Option<i32>,
+    pub max_block_size: Option<i128>,
     /// The maximum transaction size (in bytes)
     #[serde(rename = "max_tx_size", default, skip_serializing_if = "Option::is_none")]
-    pub max_tx_size: Option<i32>,
+    pub max_tx_size: Option<i128>,
     /// The maximum block header size (in bytes)
     #[serde(rename = "max_bh_size", default, skip_serializing_if = "Option::is_none")]
-    pub max_bh_size: Option<i32>,
+    pub max_bh_size: Option<i128>,
     /// The amount (in lovelace) required for a deposit to register a stake address
     #[serde(rename = "key_deposit", default, skip_serializing_if = "Option::is_none")]
     pub key_deposit: Option<String>,
@@ -31,10 +31,10 @@ pub struct EpochParamsInner {
     pub pool_deposit: Option<String>,
     /// The maximum number of epochs in the future that a pool retirement is allowed to be scheduled for
     #[serde(rename = "max_epoch", default, skip_serializing_if = "Option::is_none")]
-    pub max_epoch: Option<i32>,
+    pub max_epoch: Option<i128>,
     /// The optimal number of stake pools
     #[serde(rename = "optimal_pool_count", default, skip_serializing_if = "Option::is_none")]
-    pub optimal_pool_count: Option<i32>,
+    pub optimal_pool_count: Option<i128>,
     /// The pledge influence on pool rewards
     #[serde(rename = "influence", default, skip_serializing_if = "Option::is_none")]
     pub influence: Option<f64>,
@@ -52,10 +52,10 @@ pub struct EpochParamsInner {
     pub extra_entropy: Option<String>,
     /// The protocol major version
     #[serde(rename = "protocol_major", default, skip_serializing_if = "Option::is_none")]
-    pub protocol_major: Option<i32>,
+    pub protocol_major: Option<i128>,
     /// The protocol minor version
     #[serde(rename = "protocol_minor", default, skip_serializing_if = "Option::is_none")]
-    pub protocol_minor: Option<i32>,
+    pub protocol_minor: Option<i128>,
     /// The minimum value of a UTxO entry
     #[serde(rename = "min_utxo_value", default, skip_serializing_if = "Option::is_none")]
     pub min_utxo_value: Option<String>,
@@ -94,10 +94,10 @@ pub struct EpochParamsInner {
     pub max_val_size: Option<f32>,
     /// The percentage of the tx fee which must be provided as collateral when including non-native scripts
     #[serde(rename = "collateral_percent", default, skip_serializing_if = "Option::is_none")]
-    pub collateral_percent: Option<i32>,
+    pub collateral_percent: Option<i128>,
     /// The maximum number of collateral inputs allowed in a transaction
     #[serde(rename = "max_collateral_inputs", default, skip_serializing_if = "Option::is_none")]
-    pub max_collateral_inputs: Option<i32>,
+    pub max_collateral_inputs: Option<i128>,
     /// The cost per UTxO size
     #[serde(rename = "coins_per_utxo_size", default, skip_serializing_if = "Option::is_none")]
     pub coins_per_utxo_size: Option<String>,

@@ -22,13 +22,13 @@ pub struct TxInfoInner {
     pub absolute_slot: Option<i128>,
     /// UNIX timestamp of the transaction
     #[serde(rename = "tx_timestamp", skip_serializing_if = "Option::is_none")]
-    pub tx_timestamp: Option<i32>,
+    pub tx_timestamp: Option<i128>,
     /// Index of transaction within block
     #[serde(rename = "tx_block_index", skip_serializing_if = "Option::is_none")]
-    pub tx_block_index: Option<i32>,
+    pub tx_block_index: Option<i128>,
     /// Size in bytes of transaction
     #[serde(rename = "tx_size", skip_serializing_if = "Option::is_none")]
-    pub tx_size: Option<i32>,
+    pub tx_size: Option<i128>,
     /// Total sum of all transaction outputs (in lovelaces)
     #[serde(rename = "total_output", skip_serializing_if = "Option::is_none")]
     pub total_output: Option<String>,
@@ -40,10 +40,10 @@ pub struct TxInfoInner {
     pub deposit: Option<String>,
     /// Slot before which transaction cannot be validated (if supplied, else null)
     #[serde(rename = "invalid_before", default, skip_serializing_if = "Option::is_none")]
-    pub invalid_before: Option<i32>,
+    pub invalid_before: Option<i128>,
     /// Slot after which transaction cannot be validated
     #[serde(rename = "invalid_after", default, skip_serializing_if = "Option::is_none")]
-    pub invalid_after: Option<i32>,
+    pub invalid_after: Option<i128>,
     #[serde(rename = "collateral_inputs", skip_serializing_if = "Option::is_none")]
     pub collateral_inputs: Option<Vec<Utxo>>,
     #[serde(rename = "collateral_output", skip_serializing_if = "Option::is_none")]

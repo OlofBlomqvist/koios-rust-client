@@ -10,7 +10,7 @@ pub struct AccountHistoryInnerHistoryInner {
     pub pool_id: Option<String>,
     /// Epoch number
     #[serde(rename = "epoch_no", skip_serializing_if = "Option::is_none")]
-    pub epoch_no: Option<i32>,
+    pub epoch_no: Option<i128>,
     /// Active stake amount (in lovelaces)
     #[serde(rename = "active_stake", skip_serializing_if = "Option::is_none")]
     pub active_stake: Option<String>,
