@@ -47,7 +47,7 @@ pub struct TxInfoInner {
     #[serde(rename = "collateral_inputs", skip_serializing_if = "Option::is_none")]
     pub collateral_inputs: Option<Vec<Utxo>>,
     #[serde(rename = "collateral_output", skip_serializing_if = "Option::is_none")]
-    pub collateral_output: Option<Vec<Utxo>>,
+    pub collateral_output: Option<Utxo>,
     #[serde(rename = "reference_inputs", skip_serializing_if = "Option::is_none")]
     pub reference_inputs: Option<Vec<Utxo>>,
     #[serde(rename = "inputs", skip_serializing_if = "Option::is_none")]

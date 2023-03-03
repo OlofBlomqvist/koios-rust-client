@@ -25,8 +25,8 @@ impl DatumInfoInner {
 
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Bytes {
-    pub bytes : String,
-    pub value : serde_json::value::Value
+    pub bytes : Option<String>,
+    pub value : Option<serde_json::value::Value>
 }
 
 

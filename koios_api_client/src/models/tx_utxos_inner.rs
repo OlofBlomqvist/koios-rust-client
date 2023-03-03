@@ -39,8 +39,12 @@ pub struct RefScript {
 }
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct InlineDatum {
-    pub bytes : String,
-    pub value : serde_json::value::Value
+    /// Datum bytes (hex)
+    #[serde(rename = "bytes", skip_serializing_if = "Option::is_none")]
+    pub bytes: Option<String>,
+    /// Value (json)
+    #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
+    pub value: Option<serde_json::Value>,
 }
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Asset {
@@ -53,10 +57,14 @@ pub struct Asset {
 #[derive(Clone, Debug, PartialEq, Default, Serialize, Deserialize)]
 pub struct Utxo {
    pub payment_addr : PaymentAddr,
-   pub stake_addr : String,
+   pub stake_addr : Option<String>,
    pub tx_hash : String,
    pub tx_index : i128,
    pub value : String,
    pub datum_hash : Option<String>,
-   pub inline_datum : InlineDatum
+   pub inline_datum : Option<InlineDatum>,
+   #[serde(rename = "asset_list", default)]
+   pub asset_list: Vec<crate::models::TxInfoInnerOutputsInnerAssetListInner>,
+   #[serde(rename = "reference_script", default, skip_serializing_if = "Option::is_none")]
+   pub reference_script: Option<Box<crate::models::TxInfoInnerOutputsInnerReferenceScript>>,
 }
