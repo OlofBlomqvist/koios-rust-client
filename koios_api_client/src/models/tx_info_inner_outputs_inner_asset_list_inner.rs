@@ -14,12 +14,15 @@ pub struct TxInfoInnerOutputsInnerAssetListInner {
     /// Quantity of assets on the UTxO
     #[serde(rename = "quantity", skip_serializing_if = "Option::is_none")]
     pub quantity: Option<String>,
+    #[serde(rename = "decimals", skip_serializing_if = "Option::is_none")]
+    pub decimals: Option<i128>,
 }
 
 impl TxInfoInnerOutputsInnerAssetListInner {
     pub fn new() -> TxInfoInnerOutputsInnerAssetListInner {
         TxInfoInnerOutputsInnerAssetListInner {
             policy_id: None,
+            decimals: None,
             asset_name: None,
             fingerprint: None,
             quantity: None,

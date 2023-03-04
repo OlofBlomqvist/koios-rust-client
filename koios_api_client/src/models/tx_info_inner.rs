@@ -40,10 +40,10 @@ pub struct TxInfoInner {
     pub deposit: Option<String>,
     /// Slot before which transaction cannot be validated (if supplied, else null)
     #[serde(rename = "invalid_before", default, skip_serializing_if = "Option::is_none")]
-    pub invalid_before: Option<i128>,
+    pub invalid_before: Option<String>,
     /// Slot after which transaction cannot be validated
     #[serde(rename = "invalid_after", default, skip_serializing_if = "Option::is_none")]
-    pub invalid_after: Option<i128>,
+    pub invalid_after: Option<String>,
     #[serde(rename = "collateral_inputs", skip_serializing_if = "Option::is_none")]
     pub collateral_inputs: Option<Vec<Utxo>>,
     #[serde(rename = "collateral_output", skip_serializing_if = "Option::is_none")]
