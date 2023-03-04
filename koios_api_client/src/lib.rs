@@ -24,6 +24,26 @@ async fn epoch_params() {
     assert!(params_for_this_epoch.coins_per_utxo_size.is_some());
 }
 
+
+#[cfg(test)]
+#[tokio::test]
+async fn address_info_post() {
+    
+    let mut cfg = Configuration::new();
+    cfg.base_path = "https://preprod.koios.rest/api/v0".into();
+    let result = apis::address_api::address_info_post(
+        &cfg, 
+        Some(models::AddressInfoPostRequest { 
+            _addresses: vec![
+                "addr_test1qq39sjcfuyt29wvgr9erh0nwkewsrc0dcgjlc237g6yy6k93zvwvnr7fl7yndg5psaq3tl8qkulendq9ggtjer4jywusugp3gf".into()
+            ] })
+    ).await.unwrap();
+
+    assert!(result.len() == 1)
+    
+
+}
+
 #[cfg(test)]
 #[tokio::test]
 async fn tx_info() {

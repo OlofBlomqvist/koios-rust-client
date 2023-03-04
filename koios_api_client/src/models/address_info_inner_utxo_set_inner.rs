@@ -1,3 +1,5 @@
+use super::tx_utxos_inner::InlineDatum;
+
 
 
 
@@ -14,11 +16,11 @@ pub struct AddressInfoInnerUtxoSetInner {
     #[serde(rename = "block_time", skip_serializing_if = "Option::is_none")]
     pub block_time: Option<i128>,
     #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
-    pub value: Option<serde_json::value::Value>,
+    pub value: Option<String>,
     #[serde(rename = "datum_hash", skip_serializing_if = "Option::is_none")]
     pub datum_hash: Option<String>,
     #[serde(rename = "inline_datum", skip_serializing_if = "Option::is_none")]
-    pub inline_datum: Option<String>,
+    pub inline_datum: Option<InlineDatum>,
     #[serde(rename = "reference_script", skip_serializing_if = "Option::is_none")]
     pub reference_script: Option<crate::models::tx_utxos_inner::RefScript>,
     /// Array of policy IDs and asset names
