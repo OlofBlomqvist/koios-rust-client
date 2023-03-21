@@ -24,6 +24,20 @@ async fn epoch_params() {
     assert!(params_for_this_epoch.coins_per_utxo_size.is_some());
 }
 
+#[cfg(test)]
+#[tokio::test]
+async fn datum_info() {
+    
+    let mut cfg = Configuration::new();
+    cfg.base_path = "https://preprod.koios.rest/api/v0".into();
+    let result = apis::script_api::datum_info_post(&cfg, Some(models::DatumInfoPostRequest{
+        _datum_hashes : Some(vec!["e0d9b83271431e2aed258693945f31b764499c1fb971cd416cfe52612edae028".into()])
+    })).await.unwrap();
+
+    assert!(result.len() == 1)
+    
+
+}
 
 #[cfg(test)]
 #[tokio::test]
